@@ -49,3 +49,11 @@ const humanSelection = getHumanChoice;
 const computerSelection = getComputerChoice;
 
 playRound(humanChoice, computerChoice);
+
+function keepHumanScore() {
+  if (playRound() === "You Win!") {
+    humanScore++1 ;
+  }
+}
+
+console.log(humanScore);
