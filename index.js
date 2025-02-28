@@ -1,5 +1,3 @@
-console.log("Hello World!");
-
 function getComputerChoice() {
   let computerChoice = Math.floor(Math.random() * 3) + 1;
   if (computerChoice === 1) {
@@ -48,7 +46,82 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-playRound(getHumanChoice(), getComputerChoice());
-console.log("Your score " + humanScore);
-console.log("Computer Score " + computerScore);
-console.log("Rounds played " + roundsPlayed);
+let computerChoice;
+let humanChoice;
+
+// playRound(getHumanChoice(), getComputerChoice());
+// console.log("Your score " + humanScore);
+// console.log("Computer Score " + computerScore);
+// console.log("Rounds played " + roundsPlayed);
+
+function playGame() {
+  alert("Lets play a game!");
+  playRound(getHumanChoice(), getComputerChoice());
+  console.log(humanChoice);
+  console.log(computerChoice);
+  alert(
+    "The score is " +
+      "Your score " +
+      humanScore +
+      " | " +
+      "Computer Score " +
+      computerScore
+  );
+  alert("Rounds 2");
+  playRound(getHumanChoice(), getComputerChoice());
+  console.log(humanChoice);
+  console.log(computerChoice);
+  alert(
+    "The score is " +
+      "Your score " +
+      humanScore +
+      " | " +
+      "Computer Score " +
+      computerScore
+  );
+  alert("Rounds 3");
+  playRound(getHumanChoice(), getComputerChoice());
+  console.log(humanChoice);
+  console.log(computerChoice);
+  alert(
+    "The score is " +
+      "Your score " +
+      humanScore +
+      " | " +
+      "Computer Score " +
+      computerScore
+  );
+  alert("Rounds 4");
+  playRound(getHumanChoice(), getComputerChoice());
+  console.log(humanChoice);
+  console.log(computerChoice);
+  alert(
+    "The score is " +
+      "Your score " +
+      humanScore +
+      " | " +
+      "Computer Score " +
+      computerScore
+  );
+  alert("Rounds 5");
+  playRound(getHumanChoice(), getComputerChoice());
+  console.log(humanChoice);
+  console.log(computerChoice);
+  alert(
+    "The score is " +
+      "Your score " +
+      humanScore +
+      " | " +
+      "Computer Score " +
+      computerScore
+  );
+  if (humanScore === computerScore) {
+    alert("Its a draw!");
+  } else if (humanScore > computerScore) {
+    alert("You Win!");
+  } else {
+    alert("The Computer Wins!");
+  }
+}
+
+playGame();
