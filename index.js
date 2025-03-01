@@ -1,3 +1,5 @@
+// function to get the computer to randomly pick a choice
+
 function getComputerChoice() {
   let computerChoice = Math.floor(Math.random() * 3) + 1;
   if (computerChoice === 1) {
@@ -12,6 +14,8 @@ function getComputerChoice() {
   }
 }
 
+// function to ask the user to input a choice
+
 function getHumanChoice() {
   humanChoice = prompt("rock, paper, scissor?").toLowerCase();
   console.log("You picked " + humanChoice);
@@ -23,6 +27,8 @@ let computerScore = 0;
 
 let result = 0;
 let roundsPlayed = 0;
+
+// Function to play a round and determine a winner, it also keeps score and rounds played
 
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
@@ -46,19 +52,12 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-let computerChoice;
-let humanChoice;
-
-// playRound(getHumanChoice(), getComputerChoice());
-// console.log("Your score " + humanScore);
-// console.log("Computer Score " + computerScore);
-// console.log("Rounds played " + roundsPlayed);
+// The game function plays the game 5 times and declares a winner
 
 function playGame() {
   alert("Lets play a game!");
   playRound(getHumanChoice(), getComputerChoice());
-  console.log(humanChoice);
-  console.log(computerChoice);
+
   alert(
     "The score is " +
       "Your score " +
@@ -69,8 +68,7 @@ function playGame() {
   );
   alert("Rounds 2");
   playRound(getHumanChoice(), getComputerChoice());
-  console.log(humanChoice);
-  console.log(computerChoice);
+
   alert(
     "The score is " +
       "Your score " +
@@ -81,8 +79,7 @@ function playGame() {
   );
   alert("Rounds 3");
   playRound(getHumanChoice(), getComputerChoice());
-  console.log(humanChoice);
-  console.log(computerChoice);
+
   alert(
     "The score is " +
       "Your score " +
@@ -93,8 +90,7 @@ function playGame() {
   );
   alert("Rounds 4");
   playRound(getHumanChoice(), getComputerChoice());
-  console.log(humanChoice);
-  console.log(computerChoice);
+
   alert(
     "The score is " +
       "Your score " +
@@ -105,8 +101,6 @@ function playGame() {
   );
   alert("Rounds 5");
   playRound(getHumanChoice(), getComputerChoice());
-  console.log(humanChoice);
-  console.log(computerChoice);
   alert(
     "The score is " +
       "Your score " +
